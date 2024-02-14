@@ -1,0 +1,425 @@
+ 
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> ChatBot</title>
+    <link rel="stylesheet" href="style.css" />
+    <link class="logo" rel="icon" href="./Images/bot.png" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  </head>
+  <body onload="setTimeout(start,2000)">
+    <div class="mobile">
+      <div class="wrapper" id="wrapper">
+        <div class="header">
+          <div class="heading">
+ <h2 style="color:#e5ebf0"id="online"> </h2>
+          </div>
+        </div>
+        <div class="messages dummy" id="messages">
+          <div class="users" id="user"></div>
+        </div>
+        <br /><br /><br /><br />
+        <br /><br /><br /><br />
+        <div class="input">
+          <input id="userinput" placeholder="Type a Message" />
+          <div id="btn"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+    
+    var disc="Hey Guys! 🌟 This bot🤖 doesn't use external APIs, so answers might be a bit random. 🔄 Feel free to chat, ask questions, or share thoughts! Keeping it simple and fun. 🤖💬 Cheers! 🚀✨";
+    var start=()=> {
+    Swal.fire(disc,'','info');
+  var temp = document.createElement("div");
+  temp.innerText =
+    botResponses.greetings[
+      Math.floor(Math.random() * botResponses.greetings.length)
+    ];
+  userMessages.appendChild(temp);
+  temp.className = "bot";
+  on.innerHTML = "";
+  var img = document.createElement("img");
+  img.id = "messagebot";
+  img.src = "https://i.ibb.co/SwTKg1c/messagebot.jpg";
+  userMessages.appendChild(img);
+  userMessages.appendChild(temp);
+}
+    
+    
+    var userMessages = document.getElementById("user");
+var on = document.getElementById("online");
+on.innerHTML = "typing...";
+var message = "";
+fetch("https://kabilankavi131.github.io/ChatBot/botresponses.json")
+  .then((response) => response.json())
+  .then((data) => {
+    botResponses = data;
+
+    var user = () => {
+      message = document.getElementById("userinput").value;
+      document.getElementById("userinput").value="";
+
+      if (message.trim() === "") {
+      } else {
+        var temp = document.createElement("div");
+        temp.innerText = message;
+        temp.className = "user";
+        userMessages.appendChild(temp);
+        on.innerHTML = "typing...";
+        var img = document.createElement("img");
+        img.id = "userbot";
+        img.src = "https://i.ibb.co/NrcHQLC/user.jpg";
+        userMessages.appendChild(img);
+        userMessages.appendChild(temp);
+        document.getElementById("btn").disabled = true;
+        setTimeout(bot, 3000);
+      }
+    };
+
+
+
+
+
+
+
+
+    var bot = () => {
+      var temp = document.createElement("div");
+      var hello = [
+        "hi",
+        "hello",
+        "hey",
+        "hii",
+        "hey!",
+        "bro",
+        "Bro",
+        "sis",
+        "Sis",
+        "hi bro",
+        "Hi sis",
+      ];
+      var intro = [
+        "who",
+        "you",
+        "name",
+        "your name",
+        "name?",
+        "?",
+        "your",
+        "whats your name",
+        "you?",
+      ];
+      var bye = [
+        "bye",
+        "see you",
+        "take care",
+        "care",
+        "take",
+        "adios",
+        "good bye",
+        "goodbye",
+      ];
+      var help = [
+        "help",
+        "sugggest",
+        "take",
+        "to",
+        "good",
+        "appreciate",
+        "make",
+        "kind",
+        "help me",
+      ];
+      var like = [
+        "likes",
+        "love",
+        "kind",
+        "likes",
+        "glad",
+        "soul",
+        "well",
+        "good",
+      ];
+      var encourage = [
+        "encouragement",
+        "can't",
+        "not",
+        "bore",
+        "may not",
+        "bad",
+        "worst",
+        "negative",
+        "Don't",
+        "beleive",
+        "difference",
+        "corner",
+      ];
+      var curiosity = [
+        "curios",
+        "very",
+        "intresting",
+        "eager",
+        "fascinating",
+        "motivation",
+      ];
+      var humors = [
+        "humor",
+        "fun",
+        "laugh",
+        "jokes",
+        "comedy",
+        "funny",
+        "comedic",
+      ];
+      var supports = [
+        "help",
+        "alone",
+        "feel",
+        "sad",
+        "support",
+        "lean",
+        "admire",
+        "force",
+        "please",
+        "frustrate",
+        "moments",
+        "journey",
+        "journ",
+        "im very sad",
+      ];
+      var motive = [
+        "motivation",
+        "can",
+        "suggest",
+        "do",
+        "it",
+        "really",
+        "can i do",
+        "sugest",
+        "im very sad",
+      ];
+      var empath = [
+        "empathy",
+        "home",
+        "tough",
+        "hard",
+        "very",
+        "sense",
+        "sorry",
+        "bad",
+      ];
+      var celebrations = [
+        "celebration",
+        "kudos",
+        "fans",
+        "got",
+        "im",
+        "i'm",
+        "celebrate",
+        "pass",
+        "i got",
+        "congrats",
+        "achievement",
+        "achievements",
+        "fine",
+      ];
+      var reflections = [
+        "reflections",
+        "reflection",
+        "still",
+        "story",
+        "stories",
+        "pause",
+        "self",
+      ];
+      var positivity = [
+        "positivity",
+        "positive",
+        "+ve",
+        "ve",
+        "true",
+        "false",
+        "good",
+        "courage",
+        "block",
+      ];
+      var inappropriate = [
+        "shit",
+        "horse",
+        "damn",
+        "dangerous",
+        "die",
+        "kill",
+        "kil",
+        "dam",
+        "shucks",
+        "shuck",
+        "kucf",
+        "bad",
+        "sex",
+        "me",
+        "harm",
+      ];
+      var fineResponses = [
+        "fine",
+        "i'm fine",
+        "good",
+        "i'm good",
+        "alright",
+        "i'm alright",
+        "im good",
+        "im perfect",
+        "perfect",
+        "im fine",
+        "imfine",
+      ];
+      if (hello.includes(message.toLowerCase())) {
+        temp.innerText =
+          botResponses.greetings[
+            Math.floor(Math.random() * botResponses.greetings.length)
+          ];
+        
+      } else if (intro.includes(message.toLowerCase())) {
+        temp.innerText =
+          botResponses.introduction[
+            Math.floor(Math.random() * botResponses.introduction.length)
+          ];
+        
+      } else if (celebrations.includes(message.toLowerCase())) {
+        temp.innerText =
+          botResponses.celebration[
+            Math.floor(Math.random() * botResponses.celebration.length)
+          ];
+        
+      } else if (empath.includes(message.toLowerCase())) {
+        temp.innerText =
+          botResponses.empathy[
+            Math.floor(Math.random() * botResponses.empathy.length)
+          ];
+        
+      } else if (reflections.includes(message.toLowerCase())) {
+        temp.innerText =
+          botResponses.reflection[
+            Math.floor(Math.random() * botResponses.reflection.length)
+          ];
+        
+      } else if (humors.includes(message.toLowerCase())) {
+        temp.innerText =
+          botResponses.humor[
+            Math.floor(Math.random() * botResponses.humor.length)
+          ];
+        
+      } else if (positivity.includes(message.toLowerCase())) {
+        temp.innerText =
+          botResponses.positivity[
+            Math.floor(Math.random() * botResponses.positivity.length)
+          ];
+        
+      } else if (motive.includes(message.toLowerCase())) {
+        temp.innerText =
+          botResponses.motivation[
+            Math.floor(Math.random() * botResponses.motivation.length)
+          ];
+        
+      } else if (supports.includes(message.toLowerCase())) {
+        temp.innerText =
+          botResponses.support[
+            Math.floor(Math.random() * botResponses.support.length)
+          ];
+        
+      } else if (help.includes(message.toLowerCase())) {
+        temp.innerText =
+          botResponses.gratitude[
+            Math.floor(Math.random() * botResponses.gratitude.length)
+          ];
+        
+      } else if (like.includes(message.toLowerCase())) {
+        temp.innerText =
+          botResponses.likes[
+            Math.floor(Math.random() * botResponses.likes.length)
+          ];
+        
+      } else if (encourage.includes(message.toLowerCase())) {
+        temp.innerText =
+          botResponses.encouragement[
+            Math.floor(Math.random() * botResponses.encouragement.length)
+          ];
+        
+      } else if (curiosity.includes(message.toLowerCase())) {
+        temp.innerText =
+          botResponses.curios[
+            Math.floor(Math.random() * botResponses.curios.length)
+          ];
+        
+      } else if (bye.includes(message.toLowerCase())) {
+        temp.innerText =
+          botResponses.farewell[
+            Math.floor(Math.random() * botResponses.farewell.length)
+          ];
+        
+      } else if (inappropriate.includes(message.toLowerCase())) {
+        temp.innerText =
+          botResponses.inappropriateLanguage[
+            Math.floor(
+              Math.random() * botResponses.inappropriateLanguage.length
+            )
+          ];
+        
+      } else if (fineResponses.includes(message.toLowerCase())) {
+        temp.innerText =
+          botResponses.fineResponses[
+            Math.floor(Math.random() * botResponses.fineResponses.length)
+          ];
+        
+      } else {
+        temp.innerText =
+          botResponses.generic[
+            Math.floor(Math.random() * botResponses.generic.length)
+          ];
+        
+      }
+      var img = document.createElement("img");
+      img.id = "messagebot";
+      img.src = "https://i.ibb.co/SwTKg1c/messagebot.jpg";
+      userMessages.appendChild(img);
+      userMessages.appendChild(temp);
+      temp.className = "bot";
+      on.innerHTML = "";
+      document.getElementById("btn").disabled = false;
+    };
+
+    window.addEventListener("keydown", (event) => {
+      if (event.keyCode == 13) {
+        user();
+      }
+    });
+
+    document.getElementById("btn").addEventListener("click", user);
+    document.getElementById("userinput").addEventListener("input", () => {
+      if (document.getElementById("userinput").value != "")
+        document.getElementById("btn").style.backgroundImage =
+          "url('https://i.ibb.co/5hrw4KN/send.png')";
+      else
+        document.getElementById("btn").style.backgroundImage =
+          "url('https://i.ibb.co/RbBLk67/mic.png')";
+    });
+    var num = Math.floor(Math.random() * 2);
+    if (num == 1) {
+      document.getElementById("wrapper").style.backgroundImage =
+        "url('https://i.ibb.co/NTZ8xVB/wallpaper.jpg    ')";
+    } else {
+      document.getElementById("wrapper").style.backgroundImage =
+        "url('https://i.ibb.co/PrMf2km/background.png')";
+    }
+  });
+    
+    
+    
+</script>

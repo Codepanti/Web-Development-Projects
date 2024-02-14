@@ -1,0 +1,160 @@
+<!-- Created by Rohan Parab -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Retro Television</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <style>
+       
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="AnteenaContainer">
+                <div class="anteenaLeft" id="leftAnt">
+                    <div class="upperbar"></div>
+                    <div class="lowerbar"></div>
+                    <div class="leftPoint" id="antBallLeft">
+                    </div>
+                </div>
+                <div class="anteenaRight" id="rightAnt">
+                    <div class="upperbar"></div>
+                    <div class="lowerbar"></div>
+                    <div class="rightPoint" id="antBallRight">
+                    </div>
+                </div>
+            </div>
+            <svg class="tvSVG" height="600" width="300">
+                <circle cx="140" cy="29" r="30" stroke="#84aa32" stroke-width="3" fill="#d2db8c" id="anteenaBase" />
+                <line x1="9" y1="29" x2="281" y2="9" stroke="#84aa32" stroke-width="2" stroke-linecap="butt" />
+                <line x1="281" y1="9" x2="281" y2="201" stroke="#84aa32" stroke-width="2" stroke-linecap="butt" />
+                <line x1="282" y1="201" x2="240" y2="199" stroke="#84aa32" stroke-width="2" stroke-linecap="butt" />
+                <line x1="242" y1="199" x2="251" y2="252" stroke="#84aa32" stroke-width="2" stroke-linecap="butt" />
+                <line x1="251" y1="251" x2="239" y2="251" stroke="#84aa32" stroke-width="2" stroke-linecap="butt" />
+                <line x1="239" y1="251" x2="221" y2="197" stroke="#84aa32" stroke-width="2" stroke-linecap="butt" />
+                <line x1="221" y1="199" x2="59" y2="193" stroke="#84aa32" stroke-width="2" stroke-linecap="butt" />
+                <line x1="60" y1="193" x2="41" y2="251" stroke="#84aa32" stroke-width="2" stroke-linecap="butt" />
+                <line x1="42" y1="251" x2="29" y2="251" stroke="#84aa32" stroke-width="2" stroke-linecap="butt" />
+                <line x1="29" y1="252" x2="39" y2="191" stroke="#84aa32" stroke-width="2" stroke-linecap="butt" />
+                <line x1="39" y1="192" x2="9" y2="191" stroke="#84aa32" stroke-width="2" stroke-linecap="butt" />
+                <line x1="9" y1="191" x2="9" y2="29" stroke="#84aa32" stroke-width="2" stroke-linecap="butt" />
+                <polygon points="10 30, 280 10, 280 200, 10 190, 10 10" fill="#d2db8c" />
+                <polygon points="40 190, 60 190, 40 250, 30 250, 40 190" fill="#d2db8c" />
+                <polygon points="220 190, 240 190, 250 250, 240 250, 220 190" fill="#d2db8c" />
+                <text x="245" y="111" font-size="9" font-weight="bold" fill="#2e3b12">Off</text>
+                <text x="268" y="123" font-size="9" font-weight="bold" fill="#2e3b12">1</text>
+                <text x="268" y="145" font-size="9" font-weight="bold" fill="#2e3b12">2</text>
+                <text x="248" y="158" font-size="9" font-weight="bold" fill="#2e3b12">3</text>
+                <text x="230" y="145" font-size="9" font-weight="bold" fill="#2e3b12">4</text>
+                <text x="230" y="123" font-size="9" font-weight="bold" fill="#2e3b12">5</text>
+            </svg>
+            <div class="tvScreen">
+                <div class="screen" id="divScreen">
+
+                </div>
+                <div class="speaker">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="channelAdjust" onclick="changeChannel();">
+                    <div class="adjustBar">
+                        <div class="channelPointer"></div>
+                    </div>
+                </div>
+                <div class="indicators">
+                    <div class="indicator1">
+                    </div>
+                    <div class="indicator2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" name="name" id="hdnCurrentanteena" value="" />
+    <input type="hidden" name="name" id="hdnCurrentanteena" value="" />
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js'></script>
+    <script>
+    alert("Please hit upvote if you like the code. Suggestions and corrections are always welcome. Kindly adjust bothe the anteenas until you get the clear picture. Thank you!!");
+       var leftAnteenaAngle = 350;
+        var rightAnteenaAngle = 20;
+        var CurrentChannel = 0;
+        var CurrentChannelAngle = 0;
+        $('#antBallLeft').draggable({
+            opacity: 0.001,
+            helper: 'clone',
+            drag: function (event) {
+                $('#leftAnt').css({
+                    'transition': 'transform 0s',
+                });
+                var pw = document.getElementById('anteenaBase');
+                var offset = $("#anteenaBase").offset();
+                var width = $("#anteenaBase").width();
+                var height = $("#anteenaBase").height();
+                var center_x = offset.left;
+                var center_y = offset.top;
+
+                var mouse_x = event.pageX;
+                var mouse_y = event.pageY;
+
+                var radians = Math.atan2(mouse_x - center_x, mouse_y - center_y);
+                var degree = Math.round((radians * (180 / Math.PI) * -1) + 170);
+                var rotateCSS = 'rotate(' + (degree) + 'deg)';
+                leftAnteenaAngle = degree;
+                if (degree > 290 && degree < 340) {
+                    setChannel(CurrentChannel);
+                    $('#leftAnt').css({
+                        '-moz-transform': rotateCSS,
+                        '-webkit-transform': rotateCSS
+                    });
+                }
+            }
+        });
+
+        $('#antBallRight').draggable({
+            opacity: 0.001,
+            helper: 'clone',
+            drag: function (event) {
+                var pw = document.getElementById('anteenaBase');
+                var offset = $("#anteenaBase").offset();
+                var width = $("#anteenaBase").width();
+                var height = $("#anteenaBase").height();
+                var center_x = offset.left;
+                var center_y = offset.top;
+
+                var mouse_x = event.pageX;
+                var mouse_y = event.pageY;
+
+                var radians = Math.atan2(mouse_x - center_x, mouse_y - center_y);
+                var degree = Math.round((radians * (180 / Math.PI) * -1) + 160);
+                var rotateCSS = 'rotate(' + (degree) + 'deg)';
+                rightAnteenaAngle = degree;
+                if (degree > 20 && degree < 60) {
+                    setChannel(CurrentChannel);
+                    $('#rightAnt').css({
+                        '-moz-transform': rotateCSS,
+                        '-webkit-transform': rotateCSS
+                    });
+                }
+            }
+        });
+    </script>
+     <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+/* Created by Utkαrsh */
+
+body {
+    font-family:sanserif;
+      background-image:url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQUDEpaWukEmN0uouqoOVoqV0sAlMSdG8gehkIdSOKa8ip1huxzKAN8qbxA
+   );
+  }
+  
+  #rules{
+    position:absolute ;
+    top:10%;
+    left:10%;
+    height:80%; 
+    width:80%;
+    background-color:grey;
+    z-index:10;
+    display:none;
+  }
+  
+  #machine{
+     position:absolute;
+     top:1%;
+     height:80%;
+     left:13%;
+     width:70%;
+     border:10px solid rgb(100,50,50);
+  }
+  
+  #blade{
+     position:relative ;
+     height:20%; 
+     width:100%;
+     left:0%;
+     background:linear-gradient(left,black,rgb(50,50,50),rgb(100,100,100));
+     background:-webkit-linear-gradient(left,black,rgb(50,50,50),rgb(100,100,100));   
+  }
+  
+  #shine{
+     position:relative ; 
+     height:25%;
+     width:100%;
+     background:linear-gradient(left,rgb(200,200,200),rgb(150,150,150),rgb(100,100,100));
+     background:-webkit-linear-gradient(left,rgb(200,200,200),rgb(150,150,150),rgb(100,100,100));
+     top:75%;
+  }
+  
+  #name{
+     position:absolute; 
+     transform:rotate(-90deg);
+     top:35%;
+     left:0%;
+     color:rgba(0,0,0,0.5);
+  }
+  
+  #shine2{
+     position:relative ; 
+     height:100%;
+     width:3%;
+     background-color:white;
+     left:10%;
+     top:0%;   
+  }
+  
+  #woodPart{
+     position:relative ; 
+     width:100%;
+     height:20%;
+     left:0%;
+     top:60%;
+     background-image:url(https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTepQxBCwtTSWnauA2SyuoQJpl-lILp62n5lpBwuEoSB4ggKw49p4D9wxdu);
+  }
+  
+  #touchBox{
+     position:relative;
+     height:90%;   
+     width:28%;
+     background-color:black;
+     border-radius:100%;
+     left:35%;
+     top:5%;
+  }
+  
+  button{
+     height:10%;
+     width:20%;
+     font-size:100%;
+     color:white;
+     background-color:teal;
+     border:none;
+     box-shadow:2px 2px 2px rgba(100,100,100,0.9);
+  }
+  
+  button:hover{
+    box-shadow:6px 6px 6px rgba(100,100,100,0.9);
+    background-color:orange;
+    border:none;  
+  }
+  
+  #easy{
+    position:absolute ;
+    top:88%; 
+    left:4%;
+  }
+  
+  #medium{
+    position:absolute ;
+    top:88%; 
+    left:28%;
+  }
+  
+  #hard{
+    position:absolute ;
+    top:88%; 
+    left:52%;
+  }
+  
+  #insane{
+     position:absolute;
+     top:88%; 
+     left:76%;
+     overflow:scroll;
+  }
+  
+  #level{
+     position:absolute ;
+     color:rgba(0,0,0,0.7); 
+     font-size:150%; 
+     top:15%;
+     left:30%;   
+  }
+  
+  #score{
+     position:absolute ;
+     color:rgba(0,0,0,0.7); 
+     font-size:130%;  
+     top:24%;
+     left:20%;   
+  }
+  
+  #finger{
+     position:absolute ; 
+     color:rgba(0,0,0,0.7);
+     font-size:130%;
+     top:24%;
+     left:53%;
+  }
+  
+  #ins{
+     position:absolute ;
+     color:rgba(256,256,256,0.9); 
+     font-size:120%; 
+     top:47%;
+     left:22%;   
+  }
+  
+  #arrow{
+     position:absolute ;
+     color:rgba(250,250,250,1); 
+     font-size:200%;
+     transform:rotate(90deg);
+     top:52%;
+     left:45%;   
+  }
+  
+  #status{
+     position:absolute ;
+     background-color:rgba(50,200,200,0.5);
+     color:rgba(250,250,250,1); 
+     font-size:120%;
+     top:39%;
+     left:42%;
+     border-radius:100px;
+     padding:1%;   
+   }
+  

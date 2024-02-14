@@ -1,0 +1,223 @@
+/* Created by Rohan Parab */
+
+.container {
+    width: 300px;
+    position: relative;
+}
+
+.tvBox {
+    width: 280px;
+    height: 200px;
+    background-color: #d2db8c;
+    border-radius: 20px 40px 40px 20px;
+}
+
+.AnteenaContainer {
+    position: relative;
+    height: 100px;
+    width: 300px;
+}
+
+    .AnteenaContainer .anteenaLeft {
+        position: absolute;
+        width: 3px;
+        height: 150px;
+        bottom: -84px;
+        left: 131px;
+        transform: rotate(350deg);
+    }
+
+    .AnteenaContainer .anteenaRight {
+        position: absolute;
+        width: 3px;
+        height: 150px;
+        bottom: -84px;
+        left: 145px;
+        transform: rotate(20deg);
+    }
+
+    .AnteenaContainer .anteenaLeft .leftPoint {
+        position: absolute;
+        top: -10px;
+        left: -5px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50% 50% 50% 50%;
+        background-color: #7d7e82;
+        cursor: pointer;
+    }
+
+    .AnteenaContainer .anteenaRight .rightPoint {
+        position: absolute;
+        top: -10px;
+        left: -5px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50% 50% 50% 50%;
+        background-color: #7d7e82;
+        cursor: pointer;
+    }
+
+.upperbar {
+    position: absolute;
+    width: 3px;
+    height: 65px;
+    background-color: #7d7e82;
+}
+
+.lowerbar {
+    position: absolute;
+    width: 3px;
+    height: 75px;
+    background-color: transparent;
+}
+
+.tvScreen {
+    position: inherit;
+    width: 200px;
+    height: 140px;
+    background-color: #73746b;
+    border-radius: 10px 10px 10px 10px;
+    border: 3px solid #84aa32;
+    margin-top: 40px;
+    margin-left: 25px;
+}
+
+    .tvScreen .screen {
+        position: absolute;
+        width: 198px;
+        height: 140px;
+    }
+
+        .tvScreen .screen img {
+            width: 194px;
+            height: 134px;
+            border-radius: 10px 10px 10px 10px;
+        }
+
+        .tvScreen .screen iframe {
+            position: absolute;
+            border-radius: 10px 10px 10px 10px;
+            left: 2px;
+            top: 2px;
+            background-color: #000000;
+        }
+
+
+
+.shutDownScreen {
+    -webkit-transform: scale(0,0);
+}
+
+.shutDownScreenAnimating {
+    width: 194px;
+    height: 134px;
+    background: #ffffff;
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.tvSVG {
+    overflow: visible !important;
+    position: absolute;
+    z-index: -1;
+}
+
+.speaker {
+    width: 40px;
+    height: 60px;
+    border-radius: 50% 50% 50% 50%;
+    background-color: #d2db8c;
+    margin-left: 204px;
+    overflow: hidden;
+}
+
+    .speaker ul {
+        height: 50px;
+        padding-left: 0px;
+        list-style-type: none;
+        margin-top: 0px;
+    }
+
+        .speaker ul li {
+            width: 40px;
+            margin-bottom: 5px;
+            height: 4px;
+            background: #272a21;
+            display: inline;
+            float: left;
+        }
+
+.channelAdjust {
+    width: 30px;
+    height: 30px;
+    background-color: #da9c91;
+    position: absolute;
+    border: 1px solid #ef6a53;
+    border-radius: 50% 50% 50% 50%;
+    margin-top: 13px;
+    margin-left: 208px;
+}
+
+    .channelAdjust .adjustBar {
+        width: 9px;
+        height: 34px;
+        background-color: #272a21;
+        position: absolute;
+        border-right: 2px solid #73746b;
+        top: -3px;
+        margin-left: 10px;
+        border-radius: 2px 2px 2px 2px;
+    }
+
+    .channelAdjust .channelPointer {
+        position: absolute;
+        top: 0;
+        width: 7px;
+        height: 7px;
+        border-radius: 2px 0 0 0;
+        background-color: #73746b;
+    }
+
+.indicators {
+    width: 38px;
+    height: 15px;
+    background-color: transparent;
+    position: absolute;
+    margin-top: 58px;
+    margin-left: 206px;
+}
+
+    .indicators .indicator1 {
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        border: 1px solid #73746b;
+        background-color: #741010;
+        border-radius: 50% 50% 50% 50%;
+    }
+
+    .indicators .indicator2 {
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        left: 20px;
+        border: 1px solid #73746b;
+        background-color: #628021;
+        border-radius: 50% 50% 50% 50%;
+    }
+
+.blockedChannel {
+    padding-top: 25px;
+    color: #ffffff;
+    position: absolute;
+    width: 192px;
+    height: 133px;
+    background-color: #000000;
+    border-radius: 10px 10px 10px 10px;
+    border: 3px solid #000000;
+    text-align: center;
+}

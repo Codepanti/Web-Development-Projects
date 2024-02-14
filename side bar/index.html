@@ -1,0 +1,69 @@
+<!-- Created by NITRAJSINH SOLANKI -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sidebar Dropdown Using HTML CSS & JavaScript.</title>
+    
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="btn">
+      <span class="fas fa-bars"></span>
+    </div>
+    <nav class="sidebar">
+      <div class="text">SIDEBAR</div>
+      <ul>
+        <li class="active"><a href="https://www.sololearn.com/profile/30375597/?ref=app" target="_blank">MY PROFILE</a></li>
+        <li>
+          <a href="#" class="feat-btn"
+            >COURSES
+            <span class="fas fa-caret-down first"></span>
+          </a>
+          <ul class="feat-show">
+            <li><a href="https://www.sololearn.com/en/learn/courses/html-introduction" target="_blank">HTML</a></li>
+            <li><a href="https://www.sololearn.com/en/learn/courses/css-introduction" target="_blank">CSS</a></li>
+            <li><a href="https://www.sololearn.com/en/learn/courses/le-javascript" target="_blank">JS</a></li>
+            <li><a href="https://www.sololearn.com/en/learn/courses/web-development" target="_blank">WEB DEV.</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="https://www.sololearn.com/en/codes?ordering=MyCodeBits&page=1&language=web" target="_blank">MY CODE BITS</a></li>
+        
+        
+        <li><a href="https://www.linkedin.com/in/nitrajsinh-solanki-647b11293/" target="_blank">LINKED IN </a></li>
+        <li><a href="https://www.sololearn.com/en/contact" target="_blank">CONTANCT US</a></li>
+      </ul>
+    </nav>
+    <div class="content">
+      <div class="header">Dropdown menu using HTML CSS & JavaScript.</div>
+    </div>
+    <script>
+      $(".btn").click(function () {
+        $(this).toggleClass("click");
+        $(".sidebar").toggleClass("show");
+      });
+      $(".feat-btn").click(function () {
+        $("nav ul .feat-show").toggleClass("show");
+        $("nav ul .first").toggleClass("rotate");
+      });
+      $(".serv-btn").click(function () {
+        $("nav ul .serv-show").toggleClass("show1");
+        $("nav ul .second").toggleClass("rotate");
+      });
+      $("nav ul li").click(function () {
+        $(this).addClass("active").siblings().removeClass("active");
+      });
+    </script>
+  </body>
+</html>
+
+
+
+<!-- created by notrajsinh solanki -->

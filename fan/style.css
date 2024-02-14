@@ -1,0 +1,206 @@
+/* Created by HAPPY */
+
+body {
+    
+}
+
+.fan{
+    
+}
+
+.frame{
+    height:200px;
+    width:200px;
+    background-color:skyblue;
+    border-radius:100%;
+    left:25%;
+    position:absolute ;
+}
+
+.innerframe{
+    height:190px;
+    width:190px;
+    background-color:white ;
+    border-radius:100%;
+    left:2.5%;
+    top:2.5%;
+    position:absolute ;
+}
+
+.cir{
+    height:12.5px;
+    width:12.5px;
+    border-radius:100%;
+    background-color:skyblue;
+    left:22.5%;
+    top:22.5%;
+    position:absolute ;
+    font-size:1px;
+    letter-spacing:10px;
+}
+
+.circle{
+    height:22.5px;
+    width:22.5px;
+    border-radius:100%;
+    background-color:skyblue;
+    left:45.5%;
+    top:45.5%;
+    position:absolute  ;
+    animation:rotate linear infinite;
+ /*   animation:  acd 2s linear infinite ;*/
+}
+
+@keyframes rotate{
+    0%{
+        rotate :0deg;
+    }
+    100%{
+        rotate :360deg;
+    }
+}
+
+/*@keyframes acd{
+    0%{
+        rotate :0deg;
+    }
+    100%{
+        rotate :360deg;
+    }
+}*/
+
+#a{
+    height:20px;
+    width:10%;
+    background-color:skyblue;
+    margin-top:460px;
+    margin-left:95px;
+    border:none ;
+    border-radius:10px;
+    visibility:hidden ;
+}
+
+#a:hover{
+    background-color:lightgreen;
+}
+
+#b{
+    height:20px;
+    width:10%;
+    background-color:skyblue;
+    margin-left:9px;
+    border:none ;
+    border-radius:10px;
+    visibility:hidden ;
+}
+
+#b:hover{
+    background-color:lightgreen;
+}
+
+#c{
+    height:20px;
+    width:10%;
+    background-color:skyblue;
+    margin-left:9px;
+    border:none ;
+    border-radius:10px;
+    visibility:hidden ;
+}
+
+#c:hover{
+    background-color:lightgreen;
+}
+
+#d{
+    height:20px;
+    width:10%;
+    background-color:skyblue;
+    margin-left:9px;
+    border:none ;
+    border-radius:10px;
+    visibility:hidden ;
+}
+
+#d:hover{
+    background-color:lightgreen;
+}
+
+.stand{
+    width:10px;
+    height:200px;
+    background-color:skyblue;
+    position:absolute  ;
+    margin-left:179.75px;
+    margin-top:199px;
+    
+}
+
+
+.support{
+    height:50px;
+    width:200px;
+    background-color:skyblue;
+    position:absolute ;
+    margin-top:399.0px;
+    left:25%;
+    border-radius:100% 100% 0% 0%;
+}
+
+
+.f1{
+    height:90px;
+    background-color:skyblue;
+    border-radius:0% 0% 100% 100% ;
+}
+
+.f2{
+    height:90px;
+    width:100%;
+    margin-top:-152.5px;
+    margin-left:-37.5px;
+    background-color:skyblue;
+    border-radius:0% 0% 100% 100% ;
+    position:absolute  ;
+    transform:rotate(120deg);
+}
+
+.f3{
+    height:90px;
+    width:100%;
+    margin-top:-148.5px;
+    margin-left:32px;
+    background-color:skyblue;
+    border-radius:0% 0% 100% 100% ;
+    position:absolute  ;
+    transform:rotate(240deg);
+}
+
+#off{
+    height:20px;
+    width:10%;
+    background-color:red;
+    margin-left:165.5px;
+    margin-top:10px;
+    border:none ;
+    border-radius:10px;
+}
+    
+    
+#on{
+    height:20px;
+    width:10%;
+    background-color:lightgreen;
+    margin-left:-37.5px;
+    border:none ;
+    border-radius:10px;
+    
+}
+#vote{
+    margin-top:50px;
+    background-color:lightgreen;
+    margin-left:-90.5px;
+    border:none ;
+    border-radius:10px;
+    position:absolute ;
+    }
