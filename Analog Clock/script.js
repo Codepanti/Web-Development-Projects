@@ -1,7 +1,3 @@
-// Created by Power'f GOD⚡⚡
-
-
-
 var ID = document.getElementById.bind(document);
 
 
@@ -110,23 +106,6 @@ this.onload = function()
 
 
 
-
-//END ----->
- 
- 
- 
- 
-
-
-
-
-
-// alert("Hi, there! :) \n\nClick on my name to freeze time. ;)");
-
-//alert("Waaaaooh!😮 Code Of The Day!😀 Thank you so much, SoloLearn, for this. What a great honour!🤗 \n\nAnd thanks, guys. You all did it!😊 \n\nWaoh! This is great!😊")
- 
- 
- 
  
  
  
