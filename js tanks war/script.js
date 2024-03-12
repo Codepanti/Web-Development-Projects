@@ -1,7 +1,4 @@
-// Created by Алексей Р.
-
-/* Written by Alexey Rudenko at Sololearn playground with some little help from James Long. https://jlongster.com/Making-Sprite-based-Games-with-Canvas  */
-
+ 
 
 var w, h, k, xo, yo,
 units = [],
