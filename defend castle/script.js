@@ -1,4 +1,4 @@
-// Created by Burey
+ 
 
 /**
 * Animates bezier-curve
