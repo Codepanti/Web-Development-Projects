@@ -1,4 +1,4 @@
-// Created by Chalza
+ 
 
 $(document).ready(function(){
     var dif,op;
