@@ -1,9 +1,5 @@
 
-/*
-    TURN ON THE LIGHT
-    CREATED BY: VITRUVIAN
-    APRIL 05, 2018
-*/
+ 
 var playing = true;
 // levels.length = 12 (number of levels)
 // each element of levels array is composed of an array
