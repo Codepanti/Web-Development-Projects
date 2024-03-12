@@ -1,4 +1,4 @@
-// Created by HAPPY
+ 
 
 window.onload = function(){
 
