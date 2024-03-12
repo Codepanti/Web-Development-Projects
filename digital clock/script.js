@@ -1,7 +1,4 @@
-// Created by Kamil
-
-//Made By Kamil on Sololearn
-
+ 
 window.onload = function(){
     //alert('Hi, You Guys are awesome! Already 2k likes?!!  WOW Thank you soooooo much!!');
     printTime();
