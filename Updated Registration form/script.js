@@ -1,4 +1,4 @@
-// Created by Sachin Bhujel
+ 
 
 function openE() {
 
