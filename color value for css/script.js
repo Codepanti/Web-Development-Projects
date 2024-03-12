@@ -1,4 +1,4 @@
-// Created by Didi Georgel Danaila
+ 
 
 alert("Thank you for upvoting this code.\n");
 var x = 0, y = 0, z =0 ,color, r = "RED" ,g = "GREEN ", b = "BLUE ";
