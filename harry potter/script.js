@@ -1,7 +1,4 @@
-// Created by Pao
-
-// USERNAME INPUT
-
+ 
 var person;
 
 window.onload = function wizard() {
