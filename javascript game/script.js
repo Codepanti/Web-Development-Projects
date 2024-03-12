@@ -1,4 +1,4 @@
-// Created by RPSebb
+ 
 
 window.addEventListener("load",function() {
       
